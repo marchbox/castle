@@ -1,9 +1,9 @@
 {
   "name": "happiest-page",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.0.0",
   "main": "package.json",
-  "license": "UNLICENSED",
+  "license": "cc-by-sa-3.0",
   "scripts": {
     "dev": "sanity dev",
     "start": "sanity start",
@@ -12,7 +12,7 @@
     "deploy-graphql": "sanity graphql deploy"
   },
   "keywords": [
-    "sanity"
+    "disney"
   ],
   "dependencies": {
     "@sanity/vision": "^3.0.0",
@@ -29,8 +29,8 @@
     "typescript": "^4.0.0"
   },
   "prettier": {
-    "semi": false,
-    "printWidth": 100,
+    "semi": true,
+    "printWidth": 80,
     "bracketSpacing": false,
     "singleQuote": true
   }

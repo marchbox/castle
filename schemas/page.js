@@ -76,24 +76,8 @@ export default {
 			type: 'string',
 			title: 'Wikipedia page',
 			description: `Wikipedia page’s URL, but without the “${WIKIPEDIA_URL_PREFIX}” part`,
-			validation: Rule => Rule.regex(/\s/, {invert: true}).custom(val =>
-					new Promise(resolve => {
-						const url = `${WIKIPEDIA_URL_PREFIX}${val}`;
-						const error = `Cannot find the Wikipedia page: ${url}`;
-						const id = 'happiest-page-validate-wikipedia';
-						let link = document.getElementById(id);
-						if (link) {
-							link.remove();
-						}
-						link = document.createElement('link');
-						link.id = id;
-						link.rel = 'stylesheet';
-						link.type = 'text/css';
-						link.href = url;
-						link.addEventListener('load', () => resolve(true));
-						link.addEventListener('error', () => resolve(error));
-						document.head.append(link);
-					})),
+			// TODO: Figure out how to check if the link returns 200.
+			validation: Rule => Rule.regex(/\s/, {invert: true}).custom(val => true),
 		},
 	],
 }

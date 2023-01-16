@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "main": "package.json",
-  "license": "cc-by-sa-3.0",
+  "license": "cc-by-sa-4.0",
   "scripts": {
     "dev": "sanity dev",
     "start": "sanity start",
